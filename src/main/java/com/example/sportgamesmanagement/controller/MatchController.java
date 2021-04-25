@@ -3,8 +3,8 @@ package com.example.sportgamesmanagement.controller;
 import com.example.sportgamesmanagement.dto.MatchDTO;
 import com.example.sportgamesmanagement.model.Match;
 import com.example.sportgamesmanagement.service.MatchService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+//import io.swagger.annotations.Api;
+//import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Api(description = "This is Match API")
+//@Api(description = "This is Match API")
 @Component
 @AllArgsConstructor
 @RestController
@@ -36,7 +36,7 @@ public class MatchController {
 
     private final MatchService matchService;
 
-    @ApiOperation(value = "Create a match", notes = "(C)RUD, Creating new Match, POST Request")
+    //@ApiOperation(value = "Create a match", notes = "(C)RUD, Creating new Match, POST Request")
     @Operation(summary = "Add a new Match", description = "endpoint for creating an entity", tags = {"Match"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Match created"),
@@ -55,7 +55,7 @@ public class MatchController {
         }
     }
 
-    @ApiOperation(value = "Update an existing match", notes = "CR(U)D, Update based in ID, PUT Request")
+    //@ApiOperation(value = "Update an existing match", notes = "CR(U)D, Update based in ID, PUT Request")
     @Operation(summary = "Update an existing Match", description = "Update based in ID", tags = {"Match"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation"),
@@ -74,7 +74,7 @@ public class MatchController {
         }
     }
 
-    @ApiOperation(value = "View a match", notes = "C(R)UD, View based in ID, GET Request")
+    //@ApiOperation(value = "View a match", notes = "C(R)UD, View based in ID, GET Request")
     @Operation(summary = "Find match by ID", description = "Returns a single game", tags = {"Match"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation",
@@ -87,7 +87,7 @@ public class MatchController {
         return ResponseEntity.ok(match);
     }
 
-    @ApiOperation(value = "View all matches", notes = "C(R)UD, View all games, GET Request")
+    //@ApiOperation(value = "View all matches", notes = "C(R)UD, View all games, GET Request")
     @Operation(summary = "View all matches", description = " ", tags = {"Match"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation",
@@ -99,7 +99,7 @@ public class MatchController {
         return ResponseEntity.ok(matches);
     }
 
-    @ApiOperation(value = "Delete a match", notes = "CRU(D), Delete a game, DELETE Request")
+    //@ApiOperation(value = "Delete a match", notes = "CRU(D), Delete a game, DELETE Request")
     @Operation(summary = "Deletes a match", description = "Delete a game", tags = {"Match"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation"),

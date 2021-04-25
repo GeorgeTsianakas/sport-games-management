@@ -4,8 +4,8 @@ import com.example.sportgamesmanagement.dto.MatchOddsDTO;
 import com.example.sportgamesmanagement.model.Match;
 import com.example.sportgamesmanagement.model.MatchOdds;
 import com.example.sportgamesmanagement.service.MatchOddsService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+//import io.swagger.annotations.Api;
+//import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Api(description = "This is Match Odd API")
+//@Api(description = "This is Match Odd API")
 @Component
 @AllArgsConstructor
 @RestController
@@ -37,7 +37,7 @@ public class MatchOddsController {
 
     private final MatchOddsService matchOddsService;
 
-    @ApiOperation(value = "Create a match odd", notes = "(C)RUD, Creating new Match Odd, POST Request", produces = "application/json", consumes = "application/json")
+    //@ApiOperation(value = "Create a match odd", notes = "(C)RUD, Creating new Match Odd, POST Request", produces = "application/json", consumes = "application/json")
     @Operation(summary = "Add a new Match odd", description = "endpoint for creating an entity", tags = {"MatchOdd"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Match Odd created"),
@@ -56,7 +56,7 @@ public class MatchOddsController {
         }
     }
 
-    @ApiOperation(value = "Update an existing match odd", notes = "CR(U)D, Update based in ID, PUT Request", produces = "application/json", consumes = "application/json")
+    //@ApiOperation(value = "Update an existing match odd", notes = "CR(U)D, Update based in ID, PUT Request", produces = "application/json", consumes = "application/json")
     @Operation(summary = "Update an existing Match odd", description = "Update based in ID", tags = {"MatchOdd"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation"),
@@ -75,7 +75,7 @@ public class MatchOddsController {
         }
     }
 
-    @ApiOperation(value = "View a specific match odd", notes = "C(R)UD, View odds based in match ID, GET Request", produces = "application/json")
+    //@ApiOperation(value = "View a specific match odd", notes = "C(R)UD, View odds based in match ID, GET Request", produces = "application/json")
     @Operation(summary = "Find match odd by ID", description = "Returns a single match odd", tags = {"MatchOdd"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation",
@@ -88,7 +88,7 @@ public class MatchOddsController {
         return ResponseEntity.ok(matchOdd);
     }
 
-    @ApiOperation(value = "View all match odds", notes = "C(R)UD, View all odds of all matches, GET Request", produces = "application/json")
+    //@ApiOperation(value = "View all match odds", notes = "C(R)UD, View all odds of all matches, GET Request", produces = "application/json")
     @Operation(summary = "View all match odds", description = " ", tags = {"MatchOdd"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation",
@@ -100,7 +100,7 @@ public class MatchOddsController {
         return ResponseEntity.ok(matchOdds);
     }
 
-    @ApiOperation(value = "Delete a specific match odd", notes = "CRU(D), Delete a match odd, DELETE Request")
+    //@ApiOperation(value = "Delete a specific match odd", notes = "CRU(D), Delete a match odd, DELETE Request")
     @Operation(summary = "Deletes a match odd", description = "Delete an odd", tags = {"MatchOdd"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation"),

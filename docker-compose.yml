@@ -17,7 +17,7 @@
       container_name: web-app
       # Forward the exposed port 8080 on the container to port 8080 on the host machine
       ports:
-        - "8088:8088"
+        - "8080:8080"
       networks:
         - backend
       # This service depends on postgres. Start that first.
